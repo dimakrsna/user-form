@@ -17,9 +17,15 @@ $xs-max-width: 650px;
 -------------------------*/
 
 @media only screen and (max-width: $sm-max-width) {
+
   /*---------------
   /  TITLE tablet
   ----------------*/
+
+  .header {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 /*--------------------------
@@ -30,4 +36,59 @@ $xs-max-width: 650px;
   /*--------------
   /  TITLE mob
   ---------------*/
+
+  .wrapper {
+    padding: 30px 15px;
+  }
+
+  .header {
+    font-size: 0.8em;
+
+    &__title {
+      font-size: 1.8em;
+    }
+  }
+
+  .field-wrap {
+    flex-wrap: wrap;
+  }
+
+  .field {
+    margin-top: 10px;
+    font-size: 0.9em;
+
+    &:nth-child(2) {
+      margin-left: 0;
+    }
+
+    &__input {
+      height: 46px;
+      line-height: 46px;
+      border-radius: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .tags-field {
+
+    &__list {
+      height: auto;
+      min-height: 46px;
+    }
+  }
+
+  .form {
+
+    &__note {
+      margin-top: 30px;
+    }
+
+    &__button {
+      height: 50px;
+      line-height: 50px;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+  }
 }
