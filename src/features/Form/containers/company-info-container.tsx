@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { FieldComponent } from './../components/field-component'
 import FieldWrapComponent from './../components/field-wrap-component'
 import { ButtonComponent } from './../components/button-component'
+import { TagInput } from './../components/tags-field-component'
 
 import { changeStepAction } from './../actions/changeStepAction'
 import { getUserDataAction } from './../actions/getUserDataAction'
@@ -18,7 +19,7 @@ interface IProps {
     dispatch: Dispatch<any>
 }
 
-class SigninContainer extends PureComponent<IProps> {
+class CompanyInfoContainer extends PureComponent<IProps> {
 
     state = {
         isValid: true 
@@ -29,7 +30,8 @@ class SigninContainer extends PureComponent<IProps> {
         let key: any
 
         for (key of elems) {
-            if (key['name'] != 'button') {
+            if (key['name'] != 'button' && key['name'] != 'hidden') {
+                console.log(key['name'], key.value)
                 if(key.value){
                     formData.push({
                         name: key['name'],
@@ -39,7 +41,6 @@ class SigninContainer extends PureComponent<IProps> {
                     this.setState({
                         isValid: false 
                     })
-
                     return false
                 }
             }
@@ -54,22 +55,19 @@ class SigninContainer extends PureComponent<IProps> {
 
         if(data) {
             this.props.dispatch(getUserDataAction(data))
-            this.props.dispatch(changeStepAction(2))
+            this.props.dispatch(changeStepAction(3))
         }
     }
 
     render() {
         return <form action="" className="form" onSubmit={this.onSubmitHandler}>
-            {FieldWrapComponent([<FieldComponent name='email' title='Email address' key='email' />])}
-            {FieldWrapComponent([<FieldComponent name='firstName' title='First name' key='firstName' />,
-            <FieldComponent name='lastName' title='Last name' key='lastName' />])}
-            {FieldWrapComponent([<FieldComponent name='company' title='Company' key='company' />])}
+            <TagInput name="tools" title="My company uses the following tools"/>
+            <TagInput name="messagingPlatform" title="Our messaging platform"/>
+            {FieldWrapComponent([<FieldComponent name='role' title='My role' key='role' />]) }
             <p className={`form__note ${(this.state.isValid) ? '' : 'error'}`}>All fields are required.</p>
-            <ButtonComponent text="GET STARTED" />
-            <p className="form__copyright">© Move Work Forward. All rights reserved. <span className="form__link">Privacy and terms.</span></p>
+            <ButtonComponent text="CONTINUE" />
         </form>
     }
 }
 
-
-export default connect()(SigninContainer)
+export default connect()(CompanyInfoContainer)

@@ -7,10 +7,21 @@ type TProps = {
 const TitleComponent: React.SFC<TProps> = (props) => {
     const titles = [
         'Start your free trial now.',
-        'Awesome! Please tell us more about your org'
+        'Awesome! Please tell us more about your org',
+        'Thank you for filling out the form!'
     ]
 
-    let currTitle = (props.currentStep == 1) ? titles[0] : titles[1]
+    let { currentStep } = props
+    let currTitle
+
+    if(currentStep == 1){
+        currTitle = titles[0]
+    } else if (currentStep == 2) {
+        currTitle = titles[1]
+    } else if(currentStep == 3) {
+        currTitle = titles[2]
+    }
+
     return <h1 className="header__title">{currTitle}</h1>
 }
 
