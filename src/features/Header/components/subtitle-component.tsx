@@ -8,7 +8,7 @@ const SubtitleComponent: React.SFC<TProps> = (props) => {
     const subtitles = [
         'You’re minutes away from insights.',
         'To provide better experience with Ally',
-        ''
+        'Your data:'
     ]
 
     let { currentStep } = props

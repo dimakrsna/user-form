@@ -31,7 +31,6 @@ class CompanyInfoContainer extends PureComponent<IProps> {
 
         for (key of elems) {
             if (key['name'] != 'button' && key['name'] != 'hidden') {
-                console.log(key['name'], key.value)
                 if(key.value){
                     formData.push({
                         name: key['name'],
