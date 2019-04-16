@@ -1,0 +1,94 @@
+/*----------------
+/	   BASIC
+-----------------*/
+
+// font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+}
+
+body {
+	min-height: 100%;
+	font: 1em/1.5 'Montserrat' sans-serif;
+	color: #121212;
+	background: #F9F9F9;
+}
+
+*::selection {
+} 
+
+article, aside, main, details, figcaption, figure, footer, header, hgroup, menu, nav, section, address {
+	display: block;
+}
+
+time {
+	display: inline-block;
+}
+
+address {
+	font-style: normal;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	
+	img{
+		border:none;
+		outline:none;
+	}
+}
+
+input, textarea, button, select {
+	outline: 0;
+	border: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+figure {
+	position: relative;
+
+	img,
+	video,
+	object,
+	embed {
+		display: inline-block;
+		max-width: 100%;
+	} 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+.h1 {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.clear:before,
+.clear:after {
+	content: "";
+	display: table;
+	clear: both;
+}

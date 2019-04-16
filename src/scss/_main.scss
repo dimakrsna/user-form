@@ -1,0 +1,92 @@
+/*----------------
+/	    APP
+-----------------*/
+
+.wrapper {
+    padding: 50px 0;
+}
+
+.header {
+    text-align: center;
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &__subtitle {
+        color: #96A2AC;
+    }
+}
+
+.forms-wrap {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.form {
+
+    &__note {
+        margin-top: 50px;
+        font-size: 0.75em;
+        font-weight: 700;
+        text-align: center;
+        color: #96A2AC;
+    }
+
+    &__button {
+        width: 100%;
+        height: 60px;
+        margin: 25px 0;
+        border-radius: 8px;
+        background: #F65C8C;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    &__link {
+        font-weight: 700;
+        color: #3E8AD8;
+    }
+}
+
+.field-wrap {
+    display: flex;
+}
+
+.field {
+    margin-top: 20px;
+    width: 100%;
+    
+    &__title {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    &__input {
+        height: 54px;
+        width: 100%;
+        padding: 0 10px;
+        border: 1px solid #979797;
+        border-radius: 8px;
+        background: #fff;
+        outline: none;
+        font-size: 1em;
+    }
+
+    &:nth-child(2){
+        margin-left: 30px;
+    }
+}
