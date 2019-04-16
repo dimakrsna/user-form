@@ -1,10 +1,12 @@
 import { createStore, combineReducers } from 'redux'
 
+import { currentStepReducer } from './../features/Form/reducers/currentStepReducer'
+import { userDataReducer } from './../features/Form/reducers/userDataReducer'
 
 const rootReducer = combineReducers({
-    
+    currentStep: currentStepReducer,
+    userData: userDataReducer
 })
-
 
 declare global {
     interface Window {

@@ -1,6 +1,18 @@
 import React from 'react'
 
-export const TitleComponent = React.memo((props)=>{
+type TProps = {
+    currentStep: number
+}
 
-    return <h1 className="header__title">Start your free trial now.</h1>
-})
+const TitleComponent: React.SFC<TProps> = (props) => {
+    const titles = [
+        'Start your free trial now.',
+        'Awesome! Please tell us more about your org'
+    ]
+
+    let currTitle = (props.currentStep == 1) ? titles[0] : titles[1]
+    return <h1 className="header__title">{currTitle}</h1>
+}
+
+
+export default React.memo(TitleComponent)

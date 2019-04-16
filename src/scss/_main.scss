@@ -36,6 +36,10 @@
         font-weight: 700;
         text-align: center;
         color: #96A2AC;
+
+        &.error {
+            color: red;
+        }
     }
 
     &__button {
