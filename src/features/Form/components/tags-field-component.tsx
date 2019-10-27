@@ -73,7 +73,8 @@ export class TagInput extends Component<IProps, IState> {
           )}
           <input
             className="tags-field__input"
-            name="hidden"
+            name={`hidden`}
+            data-name={`${name}`}
             value={this.state.input}
             onChange={this.handleInputChange}
             onKeyDown={this.handleInputKeyDown}

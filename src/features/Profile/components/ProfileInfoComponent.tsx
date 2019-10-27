@@ -13,7 +13,7 @@ type TProps = {
 const ProfileInfoComponent: React.SFC<TProps> = (props) => {
     let { userData } = props
 
-    return <div>{
+    return <div className="result">{
         userData && userData.map((item: IUserData, key)=>{
             return <p key={`info-${key}`}>{item.name} : {item.value}</p>
         })
